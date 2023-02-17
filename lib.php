@@ -69,7 +69,7 @@ function atto_planetestream_params_for_js($elementid, $options, $fpoptions) {
        $params['disabled'] = true;
     }
 	
-		if (pagetype == 'mod-assign-editsubmission' || pagetype == 'mod-assign-gradingpanel') { 
+		if ((string)$PAGE->pagetype == 'mod-assign-editsubmission' || (string)$PAGE->pagetype == 'mod-assign-gradingpanel') {
 		
 		    $path = '/VLE/Moodle/Default.aspx?delta=' . $delta . '&checksum=' . $checksum
     . '&ticket=' . $authticket . '&inlinemode=moodle&assign=true';
